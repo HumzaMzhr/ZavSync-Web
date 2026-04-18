@@ -671,7 +671,7 @@ function FAQ() {
   return (
     <Section className="py-24 px-6" id="faq">
       <div className="container mx-auto max-w-3xl">
-        <div className="lg:text-right mb-16">
+        <div className="text-center mb-16">
           <SectionLabel>FAQ</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">Frequently Asked{" "}<span className="text-gradient">Questions</span></h2>
         </div>
