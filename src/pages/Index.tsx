@@ -609,7 +609,7 @@ function Pricing() {
   return (
     <Section className="py-24 px-6" id="pricing">
       <div className="container mx-auto max-w-4xl">
-        <div className="lg:text-right mb-12">
+        <div className="text-center mb-12">
           <SectionLabel>Pricing</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 tracking-tight">Simple, Transparent{" "}<span className="text-gradient">Pricing</span></h2>
           <p className="text-muted-foreground font-light">Start free. Scale as you grow.</p>
