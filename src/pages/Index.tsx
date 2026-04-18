@@ -725,48 +725,51 @@ function Footer() {
     { title: "Legal", links: ["Privacy Policy", "Terms of Service", "Cookie Policy", "Data Processing", "GDPR", "Compliance"] },
   ];
   return (
-    <footer className="border-t border-border/50 pt-16 pb-8 px-6 bg-background/50">
+    <footer className="border-t border-border/50 pt-24 pb-10 px-6 bg-background/60">
       <div className="container mx-auto">
-        {/* Top: logo + tagline + contact + social */}
-        <div className="grid lg:grid-cols-12 gap-10 mb-12 items-start">
+        <div className="grid lg:grid-cols-12 gap-12 mb-16">
+          {/* Brand block */}
           <div className="lg:col-span-4">
-            <img src={logo} alt="ZavSync" className="h-24 md:h-28 w-auto mb-1 -ml-2" />
-            <p className="text-primary text-xs font-medium uppercase tracking-[0.25em] mb-6 font-heading whitespace-nowrap">Unified · Intelligent · Synchronized</p>
-            <ul className="space-y-2.5 mb-6">
-              <li className="flex items-center gap-2 text-muted-foreground text-sm font-light"><Mail className="h-4 w-4 text-primary shrink-0" /> hello@zavsync.com</li>
-              <li className="flex items-center gap-2 text-muted-foreground text-sm font-light"><Phone className="h-4 w-4 text-primary shrink-0" /> +1 (000) 000-0000</li>
-              <li className="flex items-center gap-2 text-muted-foreground text-sm font-light"><MapPin className="h-4 w-4 text-primary shrink-0" /> Remote-first · Global</li>
+            <img src={logo} alt="ZavSync" className="h-44 md:h-52 w-auto -ml-3 mb-2" />
+            <p className="text-primary text-xs font-medium uppercase tracking-[0.25em] mb-8 font-heading whitespace-nowrap">Unified · Intelligent · Synchronized</p>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center gap-3 text-muted-foreground text-sm font-light"><Mail className="h-4 w-4 text-primary shrink-0" /> contact@zavsync.com</li>
+              <li className="flex items-center gap-3 text-muted-foreground text-sm font-light"><Phone className="h-4 w-4 text-primary shrink-0" /> +92 304 216 0000</li>
+              <li className="flex items-start gap-3 text-muted-foreground text-sm font-light"><MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" /> CCA4-87, T-Block DHA, Lahore</li>
             </ul>
-            <div className="flex flex-wrap gap-2">
-              {[
-                { Icon: Twitter, label: "Twitter" },
-                { Icon: Linkedin, label: "LinkedIn" },
-                { Icon: Instagram, label: "Instagram" },
-                { Icon: Facebook, label: "Facebook" },
-                { Icon: Youtube, label: "YouTube" },
-                { Icon: Github, label: "GitHub" },
-              ].map(({ Icon, label }) => (
-                <a key={label} href="#" aria-label={label} className="w-9 h-9 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+            <div>
+              <h4 className="font-heading font-semibold text-xs uppercase tracking-[0.2em] text-foreground/70 mb-4">Follow us</h4>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { Icon: Twitter, label: "Twitter" },
+                  { Icon: Linkedin, label: "LinkedIn" },
+                  { Icon: Instagram, label: "Instagram" },
+                  { Icon: Facebook, label: "Facebook" },
+                  { Icon: Youtube, label: "YouTube" },
+                  { Icon: Github, label: "GitHub" },
+                ].map(({ Icon, label }) => (
+                  <a key={label} href="#" aria-label={label} className="w-10 h-10 rounded-xl border border-border/60 bg-background/40 flex items-center justify-center hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all">
+                    <Icon className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
-          {/* Aligned link columns */}
+          {/* Link columns */}
           <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {cols.map(c => (
               <div key={c.title}>
-                <h4 className="font-heading font-semibold text-sm mb-4">{c.title}</h4>
-                <ul className="space-y-2.5">
+                <h4 className="font-heading font-semibold text-xs uppercase tracking-[0.2em] text-foreground/70 mb-5">{c.title}</h4>
+                <ul className="space-y-3">
                   {c.links.map(l => (
-                    <li key={l}><a href="#" className="text-muted-foreground text-sm font-light hover:text-foreground transition-colors">{l}</a></li>
+                    <li key={l}><a href="#" className="text-muted-foreground text-sm font-light hover:text-primary transition-colors">{l}</a></li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
         </div>
-        <div className="border-t border-border/50 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-xs font-light">© {new Date().getFullYear()} ZavSync. All rights reserved.</p>
           <p className="text-muted-foreground text-xs font-light">Made with intention · Built for synchronized teams</p>
         </div>
