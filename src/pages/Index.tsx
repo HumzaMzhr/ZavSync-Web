@@ -535,8 +535,8 @@ function Privacy() {
     <Section className="py-24 px-6 bg-gradient-mesh" id="privacy">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
-          <div className="relative card-3d order-2 lg:order-1 max-w-sm mx-auto">
-            <div className="blob bg-primary/30 w-56 h-56 -bottom-6 -left-6 animate-blob" />
+          <div className="relative card-3d order-2 lg:order-1 max-w-[260px] md:max-w-[300px] mx-auto">
+            <div className="blob bg-primary/30 w-44 h-44 -bottom-6 -left-6 animate-blob" />
             <img src={securityLock} alt="Privacy & Security" className="relative rounded-2xl w-full shadow-2xl" loading="lazy" width={800} height={800} />
           </div>
           <div className="order-1 lg:order-2">
