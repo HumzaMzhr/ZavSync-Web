@@ -213,10 +213,10 @@ function HowItWorks() {
   return (
     <Section className="py-24 px-6 bg-gradient-mesh" id="how-it-works">
       <div className="container mx-auto">
-        <div className="lg:text-right mb-16">
+        <div className="text-center mb-16">
           <SectionLabel>How It Works</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">From Setup to{" "}<span className="text-gradient">Synchronized</span> in Days</h2>
-          <p className="text-muted-foreground max-w-2xl lg:ml-auto mt-4 font-light">A guided journey from fragmented tools to a unified intelligent operating system.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto mt-4 font-light">A guided journey from fragmented tools to a unified intelligent operating system.</p>
         </div>
         <div className="relative grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="hidden lg:block absolute top-16 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
