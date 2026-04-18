@@ -283,10 +283,10 @@ function Features() {
   return (
     <Section className="py-24 px-6" id="features">
       <div className="container mx-auto">
-        <div className="lg:text-right mb-16">
+        <div className="text-center mb-16">
           <SectionLabel>Platform Features</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 tracking-tight">Everything You Need,{" "}<span className="text-gradient">One Platform</span></h2>
-          <p className="text-muted-foreground max-w-2xl lg:ml-auto font-light">Each module connects through a unified data layer for seamless workflows and accurate insights.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto font-light">Each module connects through a unified data layer for seamless workflows and accurate insights.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((f, i) => (
