@@ -2,9 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 import hero3d from "@/assets/hero-3d.jpg";
-import ai3d from "@/assets/ai-3d.jpg";
-import platform3d from "@/assets/platform-3d.jpg";
-import security3d from "@/assets/security-3d.jpg";
+import dashboardImg from "@/assets/dashboard-zavsync.jpg";
+import securityLock from "@/assets/security-lock.jpg";
 import {
   Layers, Brain, BarChart3, Shield, Zap, TrendingUp,
   Users, DollarSign, BookOpen, Briefcase, Building2,
@@ -60,7 +59,7 @@ function Navbar() {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-background/70 backdrop-blur-xl border-b border-border/50 shadow-sm" : ""}`}>
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <img src={logo} alt="ZavSync" className="h-16 md:h-20 w-auto" />
+        <img src={logo} alt="ZavSync" className="h-32 md:h-40 w-auto" />
         <div className="hidden lg:flex items-center gap-7">
           {links.map(l => (
             <a key={l} href={`#${l.toLowerCase().replace(/\s+/g, "-")}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide">{l}</a>
@@ -194,7 +193,7 @@ function Positioning() {
           </div>
           <div className="relative card-3d">
             <div className="blob bg-primary/30 w-72 h-72 -top-10 -left-10 animate-blob" />
-            <img src={platform3d} alt="Platform 3D Overview" className="relative rounded-2xl w-full shadow-2xl" loading="lazy" width={1024} height={1024} />
+            <img src={dashboardImg} alt="ZavSync Dashboard" className="relative rounded-2xl w-full shadow-2xl border border-border/50" loading="lazy" width={1280} height={960} />
           </div>
         </div>
       </div>
