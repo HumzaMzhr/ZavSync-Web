@@ -58,14 +58,14 @@ function Navbar() {
   const links = ["Features", "How It Works", "AI", "Analytics", "Privacy", "Pricing", "FAQ"];
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-background/70 backdrop-blur-xl border-b border-border/50 shadow-sm" : ""}`}>
-      <div className="container mx-auto flex items-center justify-between py-2 px-6 min-h-[88px]">
-        <img src={logo} alt="ZavSync" className="h-20 md:h-24 w-auto shrink-0" />
-        <div className="hidden lg:flex items-center gap-7">
-          {links.map(l => (
-            <a key={l} href={`#${l.toLowerCase().replace(/\s+/g, "-")}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide">{l}</a>
-          ))}
-        </div>
-        <div className="flex items-center gap-3">
+      <div className="container mx-auto flex items-center justify-between py-2 px-6 min-h-[120px] gap-6">
+        <img src={logo} alt="ZavSync" className="h-36 md:h-44 lg:h-48 w-auto shrink-0" />
+        <div className="flex items-center gap-6 ml-auto">
+          <div className="hidden lg:flex items-center gap-7">
+            {links.map(l => (
+              <a key={l} href={`#${l.toLowerCase().replace(/\s+/g, "-")}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide">{l}</a>
+            ))}
+          </div>
           <Button variant="hero" size="sm" className="hidden md:inline-flex">Get Started</Button>
           <button className="lg:hidden p-2" onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
