@@ -249,10 +249,10 @@ function WhySection() {
   return (
     <Section className="py-24 px-6" id="platform">
       <div className="container mx-auto">
-        <div className="lg:text-right mb-16">
+        <div className="text-center mb-16">
           <SectionLabel>Core Value</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">Why <span className="text-gradient">ZavSync</span></h2>
-          <p className="text-muted-foreground max-w-2xl lg:ml-auto mt-4 font-light">Built from the ground up to solve the fundamental problem of business fragmentation.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto mt-4 font-light">Built from the ground up to solve the fundamental problem of business fragmentation.</p>
         </div>
         <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
           {whyItems.map((w, i) => (
