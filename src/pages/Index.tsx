@@ -729,11 +729,8 @@ function Footer() {
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-12 gap-10 mb-12">
           <div className="lg:col-span-3">
-            <img src={logo} alt="ZavSync" className="h-20 w-auto mb-3" />
-            <p className="text-primary text-xs font-medium uppercase tracking-[0.25em] mb-4 font-heading">Unified · Intelligent · Synchronized</p>
-            <p className="text-muted-foreground text-sm font-light leading-relaxed mb-6">
-              The unified business operating system bringing HR, payroll, accounting, CRM, banking, and AI together.
-            </p>
+            <img src={logo} alt="ZavSync" className="h-32 md:h-40 w-auto mb-3 -ml-2" />
+            <p className="text-primary text-xs font-medium uppercase tracking-[0.25em] mb-6 font-heading whitespace-nowrap">Unified · Intelligent · Synchronized</p>
             <ul className="space-y-2.5 mb-6">
               <li className="flex items-center gap-2 text-muted-foreground text-sm font-light"><Mail className="h-4 w-4 text-primary shrink-0" /> hello@zavsync.com</li>
               <li className="flex items-center gap-2 text-muted-foreground text-sm font-light"><Phone className="h-4 w-4 text-primary shrink-0" /> +1 (000) 000-0000</li>
