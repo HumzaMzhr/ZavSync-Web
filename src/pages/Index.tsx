@@ -191,7 +191,7 @@ function Positioning() {
               Every piece of data flows seamlessly between modules, giving you a complete, accurate picture of your business at any moment.
             </p>
           </div>
-          <div className="relative card-3d">
+          <div className="relative card-3d max-w-md mx-auto lg:max-w-none lg:w-[80%] lg:ml-auto">
             <div className="blob bg-primary/30 w-72 h-72 -top-10 -left-10 animate-blob" />
             <img src={dashboardImg} alt="ZavSync Dashboard" className="relative rounded-2xl w-full shadow-2xl border border-border/50" loading="lazy" width={1280} height={960} />
           </div>
