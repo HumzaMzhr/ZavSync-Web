@@ -58,8 +58,8 @@ function Navbar() {
   const links = ["Features", "How It Works", "AI", "Analytics", "Privacy", "Pricing", "FAQ"];
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-background/70 backdrop-blur-xl border-b border-border/50 shadow-sm" : ""}`}>
-      <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <img src={logo} alt="ZavSync" className="h-32 md:h-40 w-auto" />
+      <div className="container mx-auto flex items-center justify-between py-2 px-6 min-h-[88px]">
+        <img src={logo} alt="ZavSync" className="h-20 md:h-24 w-auto shrink-0" />
         <div className="hidden lg:flex items-center gap-7">
           {links.map(l => (
             <a key={l} href={`#${l.toLowerCase().replace(/\s+/g, "-")}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide">{l}</a>
@@ -213,10 +213,10 @@ function HowItWorks() {
   return (
     <Section className="py-24 px-6 bg-gradient-mesh" id="how-it-works">
       <div className="container mx-auto">
-        <div className="lg:text-right mb-16">
+        <div className="text-center mb-16">
           <SectionLabel>How It Works</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">From Setup to{" "}<span className="text-gradient">Synchronized</span> in Days</h2>
-          <p className="text-muted-foreground max-w-2xl lg:ml-auto mt-4 font-light">A guided journey from fragmented tools to a unified intelligent operating system.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto mt-4 font-light">A guided journey from fragmented tools to a unified intelligent operating system.</p>
         </div>
         <div className="relative grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="hidden lg:block absolute top-16 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
@@ -249,10 +249,10 @@ function WhySection() {
   return (
     <Section className="py-24 px-6" id="platform">
       <div className="container mx-auto">
-        <div className="lg:text-right mb-16">
+        <div className="text-center mb-16">
           <SectionLabel>Core Value</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">Why <span className="text-gradient">ZavSync</span></h2>
-          <p className="text-muted-foreground max-w-2xl lg:ml-auto mt-4 font-light">Built from the ground up to solve the fundamental problem of business fragmentation.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto mt-4 font-light">Built from the ground up to solve the fundamental problem of business fragmentation.</p>
         </div>
         <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
           {whyItems.map((w, i) => (
@@ -283,10 +283,10 @@ function Features() {
   return (
     <Section className="py-24 px-6" id="features">
       <div className="container mx-auto">
-        <div className="lg:text-right mb-16">
+        <div className="text-center mb-16">
           <SectionLabel>Platform Features</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 tracking-tight">Everything You Need,{" "}<span className="text-gradient">One Platform</span></h2>
-          <p className="text-muted-foreground max-w-2xl lg:ml-auto font-light">Each module connects through a unified data layer for seamless workflows and accurate insights.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto font-light">Each module connects through a unified data layer for seamless workflows and accurate insights.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((f, i) => (
@@ -354,10 +354,10 @@ function AnalyticsSection() {
   return (
     <Section className="py-24 px-6 bg-gradient-mesh" id="analytics">
       <div className="container mx-auto">
-        <div className="lg:text-right mb-12">
+        <div className="text-center mb-12">
           <SectionLabel>Live Analytics</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 tracking-tight">Data-Driven{" "}<span className="text-gradient">Decision Making</span></h2>
-          <p className="text-muted-foreground max-w-2xl lg:ml-auto font-light">Real-time dashboards, financial analytics, and operational metrics—built directly into your workflow.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto font-light">Real-time dashboards, financial analytics, and operational metrics—built directly into your workflow.</p>
         </div>
         <div className="grid md:grid-cols-4 gap-4 mb-8">
           {stats.map((s, i) => (
@@ -486,7 +486,7 @@ function AISection() {
   return (
     <Section className="py-24 px-6" id="ai">
       <div className="container mx-auto">
-        <div className="lg:text-right mb-12 max-w-3xl lg:ml-auto">
+        <div className="text-center mb-12 max-w-3xl mx-auto">
           <SectionLabel>Core Differentiator</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 tracking-tight">AI-Powered{" "}<span className="text-gradient">Business Operations</span></h2>
           <p className="text-muted-foreground leading-relaxed font-light">Unlike bolted-on AI features, our intelligence layer is deeply integrated into every module, understanding context across your entire operation.</p>
@@ -579,7 +579,7 @@ function Industries() {
   return (
     <Section className="py-24 px-6">
       <div className="container mx-auto">
-        <div className="lg:text-right mb-16">
+        <div className="text-center mb-16">
           <SectionLabel>Industries</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">Built for <span className="text-gradient">Every Business</span></h2>
         </div>
@@ -609,7 +609,7 @@ function Pricing() {
   return (
     <Section className="py-24 px-6" id="pricing">
       <div className="container mx-auto max-w-4xl">
-        <div className="lg:text-right mb-12">
+        <div className="text-center mb-12">
           <SectionLabel>Pricing</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 tracking-tight">Simple, Transparent{" "}<span className="text-gradient">Pricing</span></h2>
           <p className="text-muted-foreground font-light">Start free. Scale as you grow.</p>
@@ -671,7 +671,7 @@ function FAQ() {
   return (
     <Section className="py-24 px-6" id="faq">
       <div className="container mx-auto max-w-3xl">
-        <div className="lg:text-right mb-16">
+        <div className="text-center mb-16">
           <SectionLabel>FAQ</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">Frequently Asked{" "}<span className="text-gradient">Questions</span></h2>
         </div>
@@ -727,9 +727,10 @@ function Footer() {
   return (
     <footer className="border-t border-border/50 pt-16 pb-8 px-6 bg-background/50">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-12 gap-10 mb-12">
-          <div className="lg:col-span-3">
-            <img src={logo} alt="ZavSync" className="h-32 md:h-40 w-auto mb-3 -ml-2" />
+        {/* Top: logo + tagline + contact + social */}
+        <div className="grid lg:grid-cols-12 gap-10 mb-12 items-start">
+          <div className="lg:col-span-4">
+            <img src={logo} alt="ZavSync" className="h-24 md:h-28 w-auto mb-1 -ml-2" />
             <p className="text-primary text-xs font-medium uppercase tracking-[0.25em] mb-6 font-heading whitespace-nowrap">Unified · Intelligent · Synchronized</p>
             <ul className="space-y-2.5 mb-6">
               <li className="flex items-center gap-2 text-muted-foreground text-sm font-light"><Mail className="h-4 w-4 text-primary shrink-0" /> hello@zavsync.com</li>
@@ -751,7 +752,8 @@ function Footer() {
               ))}
             </div>
           </div>
-          <div className="lg:col-span-9 grid grid-cols-2 md:grid-cols-5 gap-8">
+          {/* Aligned link columns */}
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {cols.map(c => (
               <div key={c.title}>
                 <h4 className="font-heading font-semibold text-sm mb-4">{c.title}</h4>
