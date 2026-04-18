@@ -486,37 +486,35 @@ function AISection() {
   return (
     <Section className="py-24 px-6" id="ai">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <SectionLabel>Core Differentiator</SectionLabel>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 tracking-tight">AI-Powered{" "}<span className="text-gradient">Business Operations</span></h2>
-            <p className="text-muted-foreground mb-10 leading-relaxed font-light">Unlike bolted-on AI features, our intelligence layer is deeply integrated into every module, understanding context across your entire operation.</p>
-            <div className="space-y-4">
-              {aiFeatures.map((f, i) => (
-                <div key={i} className="card-3d glass-card rounded-2xl p-6">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center shadow-lg shadow-primary/20">
-                      <f.icon className="h-5 w-5 text-primary-foreground" />
-                    </div>
-                    <h3 className="font-heading font-semibold">{f.title}</h3>
-                    {f.upcoming && <span className="text-xs bg-accent/15 text-accent px-2 py-0.5 rounded-full font-medium">Upcoming</span>}
-                  </div>
-                  <p className="text-muted-foreground text-sm font-light mb-3 ml-[52px]">{f.desc}</p>
-                  <ul className="space-y-1 ml-[52px]">
-                    {f.items.map((item, j) => (
-                      <li key={j} className="text-muted-foreground text-sm flex items-center gap-2 font-light">
-                        <ChevronRight className="h-3 w-3 text-primary shrink-0" /> {item}
-                      </li>
-                    ))}
-                  </ul>
+        <div className="lg:text-right mb-12 max-w-3xl lg:ml-auto">
+          <SectionLabel>Core Differentiator</SectionLabel>
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 tracking-tight">AI-Powered{" "}<span className="text-gradient">Business Operations</span></h2>
+          <p className="text-muted-foreground leading-relaxed font-light">Unlike bolted-on AI features, our intelligence layer is deeply integrated into every module, understanding context across your entire operation.</p>
+        </div>
+        <div className="space-y-4">
+          {aiFeatures.map((f, i) => (
+            <div key={i} className="card-3d glass-card rounded-2xl p-6 md:p-7 flex flex-col md:flex-row md:items-center gap-5 md:gap-7">
+              <div className="flex items-center gap-3 md:w-72 md:shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center shadow-lg shadow-primary/20 shrink-0">
+                  <f.icon className="h-5 w-5 text-primary-foreground" />
                 </div>
-              ))}
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h3 className="font-heading font-semibold">{f.title}</h3>
+                    {f.upcoming && <span className="text-[10px] bg-accent/15 text-accent px-2 py-0.5 rounded-full font-medium">Upcoming</span>}
+                  </div>
+                </div>
+              </div>
+              <p className="text-muted-foreground text-sm font-light md:flex-1 md:max-w-md">{f.desc}</p>
+              <ul className="md:flex-1 space-y-1.5 md:border-l md:border-border/60 md:pl-6">
+                {f.items.map((item, j) => (
+                  <li key={j} className="text-muted-foreground text-sm flex items-center gap-2 font-light">
+                    <ChevronRight className="h-3 w-3 text-primary shrink-0" /> {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-          <div className="relative card-3d animate-float">
-            <div className="blob bg-accent/30 w-80 h-80 -top-10 -right-10 animate-blob" />
-            <img src={ai3d} alt="AI Intelligence 3D" className="relative rounded-2xl w-full shadow-2xl" loading="lazy" width={1024} height={1024} />
-          </div>
+          ))}
         </div>
       </div>
     </Section>
@@ -537,9 +535,9 @@ function Privacy() {
     <Section className="py-24 px-6 bg-gradient-mesh" id="privacy">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
-          <div className="relative card-3d order-2 lg:order-1">
-            <div className="blob bg-primary/40 w-72 h-72 -bottom-10 -left-10 animate-blob" />
-            <img src={security3d} alt="Security 3D" className="relative rounded-2xl w-full shadow-2xl" loading="lazy" width={1024} height={1024} />
+          <div className="relative card-3d order-2 lg:order-1 max-w-sm mx-auto">
+            <div className="blob bg-primary/30 w-56 h-56 -bottom-6 -left-6 animate-blob" />
+            <img src={securityLock} alt="Privacy & Security" className="relative rounded-2xl w-full shadow-2xl" loading="lazy" width={800} height={800} />
           </div>
           <div className="order-1 lg:order-2">
             <SectionLabel>Privacy & Security</SectionLabel>
