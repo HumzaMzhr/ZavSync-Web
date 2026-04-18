@@ -58,14 +58,14 @@ function Navbar() {
   const links = ["Features", "How It Works", "AI", "Analytics", "Privacy", "Pricing", "FAQ"];
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-background/70 backdrop-blur-xl border-b border-border/50 shadow-sm" : ""}`}>
-      <div className="container mx-auto flex items-center justify-between py-2 px-6 min-h-[88px]">
-        <img src={logo} alt="ZavSync" className="h-20 md:h-24 w-auto shrink-0" />
-        <div className="hidden lg:flex items-center gap-7">
-          {links.map(l => (
-            <a key={l} href={`#${l.toLowerCase().replace(/\s+/g, "-")}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide">{l}</a>
-          ))}
-        </div>
-        <div className="flex items-center gap-3">
+      <div className="container mx-auto flex items-center justify-between py-2 px-6 min-h-[120px] gap-6">
+        <img src={logo} alt="ZavSync" className="h-36 md:h-44 lg:h-48 w-auto shrink-0" />
+        <div className="flex items-center gap-6 ml-auto">
+          <div className="hidden lg:flex items-center gap-7">
+            {links.map(l => (
+              <a key={l} href={`#${l.toLowerCase().replace(/\s+/g, "-")}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide">{l}</a>
+            ))}
+          </div>
           <Button variant="hero" size="sm" className="hidden md:inline-flex">Get Started</Button>
           <button className="lg:hidden p-2" onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -93,7 +93,7 @@ const heroRevenue = [
 
 function Hero() {
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden pt-24">
+    <div className="relative min-h-screen flex items-center overflow-hidden pt-36 md:pt-40">
       <div className="blob bg-primary/40 w-[500px] h-[500px] -top-32 -left-32 animate-blob" />
       <div className="blob bg-accent/30 w-[600px] h-[600px] top-40 -right-40 animate-blob" />
       <div className="absolute inset-0 grid-bg opacity-40" />
@@ -191,7 +191,7 @@ function Positioning() {
               Every piece of data flows seamlessly between modules, giving you a complete, accurate picture of your business at any moment.
             </p>
           </div>
-          <div className="relative card-3d">
+          <div className="relative card-3d max-w-md mx-auto lg:max-w-none lg:w-[80%] lg:ml-auto">
             <div className="blob bg-primary/30 w-72 h-72 -top-10 -left-10 animate-blob" />
             <img src={dashboardImg} alt="ZavSync Dashboard" className="relative rounded-2xl w-full shadow-2xl border border-border/50" loading="lazy" width={1280} height={960} />
           </div>
@@ -535,8 +535,8 @@ function Privacy() {
     <Section className="py-24 px-6 bg-gradient-mesh" id="privacy">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
-          <div className="relative card-3d order-2 lg:order-1 max-w-sm mx-auto">
-            <div className="blob bg-primary/30 w-56 h-56 -bottom-6 -left-6 animate-blob" />
+          <div className="relative card-3d order-2 lg:order-1 max-w-[260px] md:max-w-[300px] mx-auto">
+            <div className="blob bg-primary/30 w-44 h-44 -bottom-6 -left-6 animate-blob" />
             <img src={securityLock} alt="Privacy & Security" className="relative rounded-2xl w-full shadow-2xl" loading="lazy" width={800} height={800} />
           </div>
           <div className="order-1 lg:order-2">
@@ -725,48 +725,51 @@ function Footer() {
     { title: "Legal", links: ["Privacy Policy", "Terms of Service", "Cookie Policy", "Data Processing", "GDPR", "Compliance"] },
   ];
   return (
-    <footer className="border-t border-border/50 pt-16 pb-8 px-6 bg-background/50">
+    <footer className="border-t border-border/50 pt-24 pb-10 px-6 bg-background/60">
       <div className="container mx-auto">
-        {/* Top: logo + tagline + contact + social */}
-        <div className="grid lg:grid-cols-12 gap-10 mb-12 items-start">
+        <div className="grid lg:grid-cols-12 gap-12 mb-16">
+          {/* Brand block */}
           <div className="lg:col-span-4">
-            <img src={logo} alt="ZavSync" className="h-24 md:h-28 w-auto mb-1 -ml-2" />
-            <p className="text-primary text-xs font-medium uppercase tracking-[0.25em] mb-6 font-heading whitespace-nowrap">Unified · Intelligent · Synchronized</p>
-            <ul className="space-y-2.5 mb-6">
-              <li className="flex items-center gap-2 text-muted-foreground text-sm font-light"><Mail className="h-4 w-4 text-primary shrink-0" /> hello@zavsync.com</li>
-              <li className="flex items-center gap-2 text-muted-foreground text-sm font-light"><Phone className="h-4 w-4 text-primary shrink-0" /> +1 (000) 000-0000</li>
-              <li className="flex items-center gap-2 text-muted-foreground text-sm font-light"><MapPin className="h-4 w-4 text-primary shrink-0" /> Remote-first · Global</li>
+            <img src={logo} alt="ZavSync" className="h-44 md:h-52 w-auto -ml-3 mb-2" />
+            <p className="text-primary text-xs font-medium uppercase tracking-[0.25em] mb-8 font-heading whitespace-nowrap">Unified · Intelligent · Synchronized</p>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center gap-3 text-muted-foreground text-sm font-light"><Mail className="h-4 w-4 text-primary shrink-0" /> contact@zavsync.com</li>
+              <li className="flex items-center gap-3 text-muted-foreground text-sm font-light"><Phone className="h-4 w-4 text-primary shrink-0" /> +92 304 216 0000</li>
+              <li className="flex items-start gap-3 text-muted-foreground text-sm font-light"><MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" /> CCA4-87, T-Block DHA, Lahore</li>
             </ul>
-            <div className="flex flex-wrap gap-2">
-              {[
-                { Icon: Twitter, label: "Twitter" },
-                { Icon: Linkedin, label: "LinkedIn" },
-                { Icon: Instagram, label: "Instagram" },
-                { Icon: Facebook, label: "Facebook" },
-                { Icon: Youtube, label: "YouTube" },
-                { Icon: Github, label: "GitHub" },
-              ].map(({ Icon, label }) => (
-                <a key={label} href="#" aria-label={label} className="w-9 h-9 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+            <div>
+              <h4 className="font-heading font-semibold text-xs uppercase tracking-[0.2em] text-foreground/70 mb-4">Follow us</h4>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { Icon: Twitter, label: "Twitter" },
+                  { Icon: Linkedin, label: "LinkedIn" },
+                  { Icon: Instagram, label: "Instagram" },
+                  { Icon: Facebook, label: "Facebook" },
+                  { Icon: Youtube, label: "YouTube" },
+                  { Icon: Github, label: "GitHub" },
+                ].map(({ Icon, label }) => (
+                  <a key={label} href="#" aria-label={label} className="w-10 h-10 rounded-xl border border-border/60 bg-background/40 flex items-center justify-center hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all">
+                    <Icon className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
-          {/* Aligned link columns */}
+          {/* Link columns */}
           <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {cols.map(c => (
               <div key={c.title}>
-                <h4 className="font-heading font-semibold text-sm mb-4">{c.title}</h4>
-                <ul className="space-y-2.5">
+                <h4 className="font-heading font-semibold text-xs uppercase tracking-[0.2em] text-foreground/70 mb-5">{c.title}</h4>
+                <ul className="space-y-3">
                   {c.links.map(l => (
-                    <li key={l}><a href="#" className="text-muted-foreground text-sm font-light hover:text-foreground transition-colors">{l}</a></li>
+                    <li key={l}><a href="#" className="text-muted-foreground text-sm font-light hover:text-primary transition-colors">{l}</a></li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
         </div>
-        <div className="border-t border-border/50 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-xs font-light">© {new Date().getFullYear()} ZavSync. All rights reserved.</p>
           <p className="text-muted-foreground text-xs font-light">Made with intention · Built for synchronized teams</p>
         </div>
