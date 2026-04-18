@@ -486,7 +486,7 @@ function AISection() {
   return (
     <Section className="py-24 px-6" id="ai">
       <div className="container mx-auto">
-        <div className="lg:text-right mb-12 max-w-3xl lg:ml-auto">
+        <div className="text-center mb-12 max-w-3xl mx-auto">
           <SectionLabel>Core Differentiator</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 tracking-tight">AI-Powered{" "}<span className="text-gradient">Business Operations</span></h2>
           <p className="text-muted-foreground leading-relaxed font-light">Unlike bolted-on AI features, our intelligence layer is deeply integrated into every module, understanding context across your entire operation.</p>
