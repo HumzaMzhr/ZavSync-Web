@@ -354,10 +354,10 @@ function AnalyticsSection() {
   return (
     <Section className="py-24 px-6 bg-gradient-mesh" id="analytics">
       <div className="container mx-auto">
-        <div className="lg:text-right mb-12">
+        <div className="text-center mb-12">
           <SectionLabel>Live Analytics</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 tracking-tight">Data-Driven{" "}<span className="text-gradient">Decision Making</span></h2>
-          <p className="text-muted-foreground max-w-2xl lg:ml-auto font-light">Real-time dashboards, financial analytics, and operational metrics—built directly into your workflow.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto font-light">Real-time dashboards, financial analytics, and operational metrics—built directly into your workflow.</p>
         </div>
         <div className="grid md:grid-cols-4 gap-4 mb-8">
           {stats.map((s, i) => (
