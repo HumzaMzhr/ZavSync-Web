@@ -93,7 +93,7 @@ const heroRevenue = [
 
 function Hero() {
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden pt-24">
+    <div className="relative min-h-screen flex items-center overflow-hidden pt-36 md:pt-40">
       <div className="blob bg-primary/40 w-[500px] h-[500px] -top-32 -left-32 animate-blob" />
       <div className="blob bg-accent/30 w-[600px] h-[600px] top-40 -right-40 animate-blob" />
       <div className="absolute inset-0 grid-bg opacity-40" />
