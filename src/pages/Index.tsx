@@ -727,9 +727,10 @@ function Footer() {
   return (
     <footer className="border-t border-border/50 pt-16 pb-8 px-6 bg-background/50">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-12 gap-10 mb-12">
-          <div className="lg:col-span-3">
-            <img src={logo} alt="ZavSync" className="h-32 md:h-40 w-auto mb-3 -ml-2" />
+        {/* Top: logo + tagline + contact + social */}
+        <div className="grid lg:grid-cols-12 gap-10 mb-12 items-start">
+          <div className="lg:col-span-4">
+            <img src={logo} alt="ZavSync" className="h-24 md:h-28 w-auto mb-1 -ml-2" />
             <p className="text-primary text-xs font-medium uppercase tracking-[0.25em] mb-6 font-heading whitespace-nowrap">Unified · Intelligent · Synchronized</p>
             <ul className="space-y-2.5 mb-6">
               <li className="flex items-center gap-2 text-muted-foreground text-sm font-light"><Mail className="h-4 w-4 text-primary shrink-0" /> hello@zavsync.com</li>
@@ -751,7 +752,8 @@ function Footer() {
               ))}
             </div>
           </div>
-          <div className="lg:col-span-9 grid grid-cols-2 md:grid-cols-5 gap-8">
+          {/* Aligned link columns */}
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {cols.map(c => (
               <div key={c.title}>
                 <h4 className="font-heading font-semibold text-sm mb-4">{c.title}</h4>
