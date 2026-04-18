@@ -213,10 +213,10 @@ function HowItWorks() {
   return (
     <Section className="py-24 px-6 bg-gradient-mesh" id="how-it-works">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="lg:text-right mb-16">
           <SectionLabel>How It Works</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">From Setup to{" "}<span className="text-gradient">Synchronized</span> in Days</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mt-4 font-light">A guided journey from fragmented tools to a unified intelligent operating system.</p>
+          <p className="text-muted-foreground max-w-2xl lg:ml-auto mt-4 font-light">A guided journey from fragmented tools to a unified intelligent operating system.</p>
         </div>
         <div className="relative grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="hidden lg:block absolute top-16 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
@@ -249,10 +249,10 @@ function WhySection() {
   return (
     <Section className="py-24 px-6" id="platform">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="lg:text-right mb-16">
           <SectionLabel>Core Value</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">Why <span className="text-gradient">ZavSync</span></h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mt-4 font-light">Built from the ground up to solve the fundamental problem of business fragmentation.</p>
+          <p className="text-muted-foreground max-w-2xl lg:ml-auto mt-4 font-light">Built from the ground up to solve the fundamental problem of business fragmentation.</p>
         </div>
         <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
           {whyItems.map((w, i) => (
@@ -283,10 +283,10 @@ function Features() {
   return (
     <Section className="py-24 px-6" id="features">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="lg:text-right mb-16">
           <SectionLabel>Platform Features</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 tracking-tight">Everything You Need,{" "}<span className="text-gradient">One Platform</span></h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto font-light">Each module connects through a unified data layer for seamless workflows and accurate insights.</p>
+          <p className="text-muted-foreground max-w-2xl lg:ml-auto font-light">Each module connects through a unified data layer for seamless workflows and accurate insights.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((f, i) => (
@@ -354,10 +354,10 @@ function AnalyticsSection() {
   return (
     <Section className="py-24 px-6 bg-gradient-mesh" id="analytics">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <div className="lg:text-right mb-12">
           <SectionLabel>Live Analytics</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 tracking-tight">Data-Driven{" "}<span className="text-gradient">Decision Making</span></h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto font-light">Real-time dashboards, financial analytics, and operational metrics—built directly into your workflow.</p>
+          <p className="text-muted-foreground max-w-2xl lg:ml-auto font-light">Real-time dashboards, financial analytics, and operational metrics—built directly into your workflow.</p>
         </div>
         <div className="grid md:grid-cols-4 gap-4 mb-8">
           {stats.map((s, i) => (
@@ -581,7 +581,7 @@ function Industries() {
   return (
     <Section className="py-24 px-6">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="lg:text-right mb-16">
           <SectionLabel>Industries</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">Built for <span className="text-gradient">Every Business</span></h2>
         </div>
@@ -611,7 +611,7 @@ function Pricing() {
   return (
     <Section className="py-24 px-6" id="pricing">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
+        <div className="lg:text-right mb-12">
           <SectionLabel>Pricing</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 tracking-tight">Simple, Transparent{" "}<span className="text-gradient">Pricing</span></h2>
           <p className="text-muted-foreground font-light">Start free. Scale as you grow.</p>
@@ -673,7 +673,7 @@ function FAQ() {
   return (
     <Section className="py-24 px-6" id="faq">
       <div className="container mx-auto max-w-3xl">
-        <div className="text-center mb-16">
+        <div className="lg:text-right mb-16">
           <SectionLabel>FAQ</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">Frequently Asked{" "}<span className="text-gradient">Questions</span></h2>
         </div>
