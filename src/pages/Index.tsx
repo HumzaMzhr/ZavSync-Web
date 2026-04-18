@@ -2,9 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 import hero3d from "@/assets/hero-3d.jpg";
-import ai3d from "@/assets/ai-3d.jpg";
-import platform3d from "@/assets/platform-3d.jpg";
-import security3d from "@/assets/security-3d.jpg";
+import dashboardImg from "@/assets/dashboard-zavsync.jpg";
+import securityLock from "@/assets/security-lock.jpg";
 import {
   Layers, Brain, BarChart3, Shield, Zap, TrendingUp,
   Users, DollarSign, BookOpen, Briefcase, Building2,
@@ -60,7 +59,7 @@ function Navbar() {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-background/70 backdrop-blur-xl border-b border-border/50 shadow-sm" : ""}`}>
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <img src={logo} alt="ZavSync" className="h-16 md:h-20 w-auto" />
+        <img src={logo} alt="ZavSync" className="h-32 md:h-40 w-auto" />
         <div className="hidden lg:flex items-center gap-7">
           {links.map(l => (
             <a key={l} href={`#${l.toLowerCase().replace(/\s+/g, "-")}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide">{l}</a>
@@ -194,7 +193,7 @@ function Positioning() {
           </div>
           <div className="relative card-3d">
             <div className="blob bg-primary/30 w-72 h-72 -top-10 -left-10 animate-blob" />
-            <img src={platform3d} alt="Platform 3D Overview" className="relative rounded-2xl w-full shadow-2xl" loading="lazy" width={1024} height={1024} />
+            <img src={dashboardImg} alt="ZavSync Dashboard" className="relative rounded-2xl w-full shadow-2xl border border-border/50" loading="lazy" width={1280} height={960} />
           </div>
         </div>
       </div>
@@ -214,10 +213,10 @@ function HowItWorks() {
   return (
     <Section className="py-24 px-6 bg-gradient-mesh" id="how-it-works">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="lg:text-right mb-16">
           <SectionLabel>How It Works</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">From Setup to{" "}<span className="text-gradient">Synchronized</span> in Days</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mt-4 font-light">A guided journey from fragmented tools to a unified intelligent operating system.</p>
+          <p className="text-muted-foreground max-w-2xl lg:ml-auto mt-4 font-light">A guided journey from fragmented tools to a unified intelligent operating system.</p>
         </div>
         <div className="relative grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="hidden lg:block absolute top-16 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
@@ -250,10 +249,10 @@ function WhySection() {
   return (
     <Section className="py-24 px-6" id="platform">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="lg:text-right mb-16">
           <SectionLabel>Core Value</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">Why <span className="text-gradient">ZavSync</span></h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mt-4 font-light">Built from the ground up to solve the fundamental problem of business fragmentation.</p>
+          <p className="text-muted-foreground max-w-2xl lg:ml-auto mt-4 font-light">Built from the ground up to solve the fundamental problem of business fragmentation.</p>
         </div>
         <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
           {whyItems.map((w, i) => (
@@ -284,10 +283,10 @@ function Features() {
   return (
     <Section className="py-24 px-6" id="features">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="lg:text-right mb-16">
           <SectionLabel>Platform Features</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 tracking-tight">Everything You Need,{" "}<span className="text-gradient">One Platform</span></h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto font-light">Each module connects through a unified data layer for seamless workflows and accurate insights.</p>
+          <p className="text-muted-foreground max-w-2xl lg:ml-auto font-light">Each module connects through a unified data layer for seamless workflows and accurate insights.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((f, i) => (
@@ -355,10 +354,10 @@ function AnalyticsSection() {
   return (
     <Section className="py-24 px-6 bg-gradient-mesh" id="analytics">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <div className="lg:text-right mb-12">
           <SectionLabel>Live Analytics</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 tracking-tight">Data-Driven{" "}<span className="text-gradient">Decision Making</span></h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto font-light">Real-time dashboards, financial analytics, and operational metrics—built directly into your workflow.</p>
+          <p className="text-muted-foreground max-w-2xl lg:ml-auto font-light">Real-time dashboards, financial analytics, and operational metrics—built directly into your workflow.</p>
         </div>
         <div className="grid md:grid-cols-4 gap-4 mb-8">
           {stats.map((s, i) => (
@@ -487,37 +486,35 @@ function AISection() {
   return (
     <Section className="py-24 px-6" id="ai">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <SectionLabel>Core Differentiator</SectionLabel>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 tracking-tight">AI-Powered{" "}<span className="text-gradient">Business Operations</span></h2>
-            <p className="text-muted-foreground mb-10 leading-relaxed font-light">Unlike bolted-on AI features, our intelligence layer is deeply integrated into every module, understanding context across your entire operation.</p>
-            <div className="space-y-4">
-              {aiFeatures.map((f, i) => (
-                <div key={i} className="card-3d glass-card rounded-2xl p-6">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center shadow-lg shadow-primary/20">
-                      <f.icon className="h-5 w-5 text-primary-foreground" />
-                    </div>
-                    <h3 className="font-heading font-semibold">{f.title}</h3>
-                    {f.upcoming && <span className="text-xs bg-accent/15 text-accent px-2 py-0.5 rounded-full font-medium">Upcoming</span>}
-                  </div>
-                  <p className="text-muted-foreground text-sm font-light mb-3 ml-[52px]">{f.desc}</p>
-                  <ul className="space-y-1 ml-[52px]">
-                    {f.items.map((item, j) => (
-                      <li key={j} className="text-muted-foreground text-sm flex items-center gap-2 font-light">
-                        <ChevronRight className="h-3 w-3 text-primary shrink-0" /> {item}
-                      </li>
-                    ))}
-                  </ul>
+        <div className="lg:text-right mb-12 max-w-3xl lg:ml-auto">
+          <SectionLabel>Core Differentiator</SectionLabel>
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 tracking-tight">AI-Powered{" "}<span className="text-gradient">Business Operations</span></h2>
+          <p className="text-muted-foreground leading-relaxed font-light">Unlike bolted-on AI features, our intelligence layer is deeply integrated into every module, understanding context across your entire operation.</p>
+        </div>
+        <div className="space-y-4">
+          {aiFeatures.map((f, i) => (
+            <div key={i} className="card-3d glass-card rounded-2xl p-6 md:p-7 flex flex-col md:flex-row md:items-center gap-5 md:gap-7">
+              <div className="flex items-center gap-3 md:w-72 md:shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center shadow-lg shadow-primary/20 shrink-0">
+                  <f.icon className="h-5 w-5 text-primary-foreground" />
                 </div>
-              ))}
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h3 className="font-heading font-semibold">{f.title}</h3>
+                    {f.upcoming && <span className="text-[10px] bg-accent/15 text-accent px-2 py-0.5 rounded-full font-medium">Upcoming</span>}
+                  </div>
+                </div>
+              </div>
+              <p className="text-muted-foreground text-sm font-light md:flex-1 md:max-w-md">{f.desc}</p>
+              <ul className="md:flex-1 space-y-1.5 md:border-l md:border-border/60 md:pl-6">
+                {f.items.map((item, j) => (
+                  <li key={j} className="text-muted-foreground text-sm flex items-center gap-2 font-light">
+                    <ChevronRight className="h-3 w-3 text-primary shrink-0" /> {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-          <div className="relative card-3d animate-float">
-            <div className="blob bg-accent/30 w-80 h-80 -top-10 -right-10 animate-blob" />
-            <img src={ai3d} alt="AI Intelligence 3D" className="relative rounded-2xl w-full shadow-2xl" loading="lazy" width={1024} height={1024} />
-          </div>
+          ))}
         </div>
       </div>
     </Section>
@@ -538,9 +535,9 @@ function Privacy() {
     <Section className="py-24 px-6 bg-gradient-mesh" id="privacy">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
-          <div className="relative card-3d order-2 lg:order-1">
-            <div className="blob bg-primary/40 w-72 h-72 -bottom-10 -left-10 animate-blob" />
-            <img src={security3d} alt="Security 3D" className="relative rounded-2xl w-full shadow-2xl" loading="lazy" width={1024} height={1024} />
+          <div className="relative card-3d order-2 lg:order-1 max-w-sm mx-auto">
+            <div className="blob bg-primary/30 w-56 h-56 -bottom-6 -left-6 animate-blob" />
+            <img src={securityLock} alt="Privacy & Security" className="relative rounded-2xl w-full shadow-2xl" loading="lazy" width={800} height={800} />
           </div>
           <div className="order-1 lg:order-2">
             <SectionLabel>Privacy & Security</SectionLabel>
@@ -582,7 +579,7 @@ function Industries() {
   return (
     <Section className="py-24 px-6">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="lg:text-right mb-16">
           <SectionLabel>Industries</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">Built for <span className="text-gradient">Every Business</span></h2>
         </div>
@@ -612,7 +609,7 @@ function Pricing() {
   return (
     <Section className="py-24 px-6" id="pricing">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
+        <div className="lg:text-right mb-12">
           <SectionLabel>Pricing</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 tracking-tight">Simple, Transparent{" "}<span className="text-gradient">Pricing</span></h2>
           <p className="text-muted-foreground font-light">Start free. Scale as you grow.</p>
@@ -674,7 +671,7 @@ function FAQ() {
   return (
     <Section className="py-24 px-6" id="faq">
       <div className="container mx-auto max-w-3xl">
-        <div className="text-center mb-16">
+        <div className="lg:text-right mb-16">
           <SectionLabel>FAQ</SectionLabel>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">Frequently Asked{" "}<span className="text-gradient">Questions</span></h2>
         </div>
@@ -732,11 +729,8 @@ function Footer() {
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-12 gap-10 mb-12">
           <div className="lg:col-span-3">
-            <img src={logo} alt="ZavSync" className="h-20 w-auto mb-3" />
-            <p className="text-primary text-xs font-medium uppercase tracking-[0.25em] mb-4 font-heading">Unified · Intelligent · Synchronized</p>
-            <p className="text-muted-foreground text-sm font-light leading-relaxed mb-6">
-              The unified business operating system bringing HR, payroll, accounting, CRM, banking, and AI together.
-            </p>
+            <img src={logo} alt="ZavSync" className="h-32 md:h-40 w-auto mb-3 -ml-2" />
+            <p className="text-primary text-xs font-medium uppercase tracking-[0.25em] mb-6 font-heading whitespace-nowrap">Unified · Intelligent · Synchronized</p>
             <ul className="space-y-2.5 mb-6">
               <li className="flex items-center gap-2 text-muted-foreground text-sm font-light"><Mail className="h-4 w-4 text-primary shrink-0" /> hello@zavsync.com</li>
               <li className="flex items-center gap-2 text-muted-foreground text-sm font-light"><Phone className="h-4 w-4 text-primary shrink-0" /> +1 (000) 000-0000</li>
